@@ -204,7 +204,7 @@ app.post('/addproduct', upload.single('image'), function(req, res){
 		productgender: req.body.productgender,
 		productspecial: req.body.special,
 		quantity: req.body.quantity,
-		productimg: 'https://storage.googleapis.com/jadrehaoui/'req.file.filename
+		productimg: 'https://storage.googleapis.com/jadrehaoui/'+req.file.filename
 	}, function(err, db){
 		if(err){
 			console.log('ERROR !!');
