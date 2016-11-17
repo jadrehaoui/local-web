@@ -256,7 +256,7 @@ app.post('/removefromcarousel', function(req, res){
 })
 app.post('/addtocarousel', upload.single('image'),function(req, res){
 	carouselimage.create({
-		image: req.file.filename,
+		image: 'https://storage.googleapis.com/jadrehaoui/' + req.file.filename,
 		imageid: req.body.imageid,
 		first: req.body.first
 	}, function(err, db){
