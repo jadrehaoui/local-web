@@ -1,0 +1,26 @@
+<%include partials/header%>
+<div class = 'container'>
+  <table>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>price</th>
+      <th>size</th>
+      <th>gender</th>
+      <th>quantity</th>
+      <th>special</th>
+    </tr>
+    <% prod.forEach(function(product){ %>
+      <tr>
+        <td><%= product.productid%></td>
+        <td><%= product.productname%></td>
+        <td><%= product.productprice%></td>
+        <td><%= product.productsize%></td>
+        <td><%= product.productgender%></td>
+        <td><%= product.quantity%></td>
+        <td><%= product.productspecial%></td>
+      </tr>
+    <%})%>
+  </table>
+</div>
+<%include partials/footer%>

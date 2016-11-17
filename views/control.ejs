@@ -1,0 +1,74 @@
+<%include partials/header%>
+<div class = 'container'>
+  <h4>Add a product</h4>
+  <form action="/addproduct" method="post" enctype="multipart/form-data">
+    <input class = 'form-control' name = 'image' placeholder = 'imageURL' type = 'file' required>
+    <input class = 'form-control' name = 'productname' placeholder = 'Product Name' type = 'text' required>
+    <input class = 'form-control' name = 'size' placeholder = 'Product Size' type = 'text' required>
+    <input class = 'form-control' name = 'productprice' placeholder = 'Product Price' type = 'text' required>
+    <input class = 'form-control' name = 'productId' placeholder = 'Product ID' type = 'text' required>
+    <input class = 'form-control' name = 'quantity' placeholder = 'Quantity' type = 'text' required>
+    gender :
+    <input type='radio' value='male' name='productgender' checked>
+      <label for = 'male'>male</label>
+    <input type='radio' value='female' name='productgender'>
+      <label for = "female">female</label>
+    <input type='radio' value='kids' name='productgender'>
+      <label for = "kids">kids</label><br>
+    Set :
+    <input type='radio' value='yes' name='set'>
+      <label for = 'male'>yes</label>
+    <input type='radio' value='no' name='set' checked>
+      <label for = "female">no</label><br>
+    special:
+    <input type='radio' value='yes' name='special'>
+      <label for = "yes">yes</label>
+    <input type='radio' value='no' name='special' checked>
+    <label for = "no">no</label><br>
+    <button class = 'btn btn-warning'>Add this product</button>
+  </form>
+  <h4>Remove a product</h4>
+  <form action="/removeproduct" method="post">
+    <input class = 'form-control' name = 'productid' placeholder = 'Product ID' type = 'text' required>
+    <button class = 'btn btn-warning'>Remove this product</button>
+  </form>
+  <h4>Modify a product</h4>
+  <form action="/modifyproduct" method="post">
+    <input class = 'form-control' name = 'tomodify' placeholder = 'The ID of the product you want to modify' type = 'text' required>
+    <input class = 'form-control' name = 'productprice' placeholder = 'Product Price' type = 'text' required>
+    <input class = 'form-control' name = 'productId' placeholder = 'Product ID' type = 'text' required>
+    <input class = 'form-control' name = 'quantity' placeholder = 'Quantity' type = 'text' required>
+    special:
+    <input type='radio' value='yes' name='special'>
+      <label for = "yes">yes</label>
+    <input type='radio' value='no' name='special' checked>
+    <label for = "no">no</label><br>
+    <button class = 'btn btn-warning'>Modify this product</button>
+  </form>
+  <h4>Add an image to the carousel</h4>
+  <form action="/addtocarousel" method="post" enctype="multipart/form-data">
+    <input class = 'form-control' name = 'image' type = 'file' required>
+    <input class = 'form-control' name = 'imageid' type = 'text' placeholder = 'Image number' required>
+    is First ? :
+    <input type='radio' value='yes' name='first'>
+      <label for = 'yes'>yes</label>
+    <input type='radio' value='no' name='first' checked>
+      <label for = "no">no</label><br>
+    <button class = 'btn btn-warning'>Add this photo</button>
+  </form>
+  <h4>Remove an image from the carousel</h4>
+  <form action="/removefromcarousel" method="post">
+    <input type = 'text' name = 'imageid' class = 'form-control' placeholder = 'Image number' required>
+    <button class = 'btn btn-warning'>Remove this photo</button>
+  </form>
+  <form action="/seeproducttable" method="post">
+    <input type = 'text' name = 'order' class = 'form-control' placeholder = 'see' required>
+    <button class = 'btn btn-warning'>see</button>
+  </form>
+  <!-- <h4>Remove a photo</h4>
+  <form action="/removeimage" method="post">
+    <input class = 'form-control' name = 'number' placeholder = 'Number of the photo you want to remove' type = 'text' required>
+    <button class = 'btn btn-warning'>Remove this photo</button>
+  </form> -->
+</div>
+<%include partials/footer%>

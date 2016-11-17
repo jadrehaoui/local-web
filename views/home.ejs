@@ -1,0 +1,46 @@
+<%include partials/header%>
+<%include partials/sidebar%>
+    <div class="col-md-9">
+      <div class="row carousel-holder">
+        <div class="col-md-12">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <% for(var i = 0; i < carousel.length; i++){%>
+                <%if(i == 0){%>
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <%} else {%>
+                  <li data-target="#carousel-example-generic" data-slide-to="<%= i%>"></li>
+                  <%}%>
+              <%}%>
+
+            </ol>
+            <div style = 'max-height: 300px'class="carousel-inner">
+              <% carousel.forEach(function(image){%>
+              <% if(image.first == 'yes'){%>
+                <div class="item active">
+                  <img class="slide-image" src= '<%= image.image%>' alt="">
+                </div>
+              <%} else {%>
+                <div class="item">
+                  <img class="slide-image" src= '<%= image.image%>' alt="">
+                </div>
+              <%}%>
+              <%})%>
+
+            </div>
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <% include partials/product%>
+      </div>
+    </div>
+  </div>
+</div>
+<%include partials/footer%>

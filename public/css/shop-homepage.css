@@ -1,0 +1,92 @@
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+table {
+  border: 1px solid black;
+  margin: 0 auto;
+}
+td {
+  padding: 2px;
+  text-align: center;
+  border: 1px solid black;
+}
+th {
+  padding: 2px;
+  text-align: center;
+  border: 1px solid black;
+  width: 150px;
+}
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+.loginform {
+      width: 50%;
+      margin: 0 auto 0;
+}
+.loginbutton {
+      width: 100%;
+      background-color: #222222;
+}
+.loginbutton:hover {
+      background-color: #9d9d9d;
+}
+.title {
+  color: #4385bd;
+}
+.searchbar {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  text-align: center;
+}
+.searchbtn {
+  margin-top: 1%;
+  width: 100%;
+}
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+  text-align: center;
+    height: 110px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 5px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}

@@ -1,0 +1,15 @@
+<% prod.forEach(function(product){ %>
+<div class="col-xs-6 col-sm-4 col-lg-3 col-md-3">
+  <div class="thumbnail">
+    <img style = 'max-height: 140px'src=<%= product.productimg%> alt="">
+    <div style = 'height: 145px' class="caption">
+      <h4 class= 'title'>
+        <%= product.productname%>
+      </h4>
+      <p style = 'color: #777;'><%= product.productsize%> ml</p>
+      <p><strong>ID : </strong><%= product.productid%></p>
+      <p class="ratings"><%= product.quantity%> in stock</p>
+    </div>
+  </div>
+</div>
+<%})%>
